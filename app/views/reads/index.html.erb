@@ -2,14 +2,12 @@
 
 
 <table>
-  <th>Rank</th>
   <th>URL</th>
   <th>Hits</th>
-  <% @top_reads.each do |read| %>
-    <tr>
-      <td><%= read.rank %><td>
-      <td><%= read.url %></td>
-      <td><%= read.hits %></td>
+  <% @top_reads.each do |url, hits| %>
+    <tr class='read'>
+      <td><%= url %></td>
+      <td><%= hits %></td>
     </tr>
   <% end %>
 </table>

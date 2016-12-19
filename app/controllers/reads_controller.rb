@@ -2,7 +2,7 @@ class ReadsController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def index
-    @reads = Read.all
+    @top_reads = Read.top_ten_reads
   end
 
 
