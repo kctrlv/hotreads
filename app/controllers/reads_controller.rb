@@ -7,7 +7,6 @@ class ReadsController < ApplicationController
 
 
   def create
-    @read = Read.find_or_create_by(url: params[:url])
-    @read.increment(:hits, 1)
+    @read = Read.create(url: params[:url])
   end
 end
