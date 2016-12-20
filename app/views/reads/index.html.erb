@@ -5,7 +5,7 @@
   <th>Hits</th>
   <% @top_reads.each do |url, hits| %>
     <tr class='read'>
-      <td><%= url %></td>
+      <td><%= link_to url, url %></td>
       <td><%= hits %></td>
     </tr>
   <% end %>
